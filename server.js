@@ -11,16 +11,16 @@ app.get('/', function (req, res) {
 
 app.get('/article1',function(req, res)
 {
-   res.sendFile('aticle one');
+   res.send('aticle one');
 });
 app.get('/article2',function(req, res)
 {
-   res.sendFile('aticle two');
+   res.send('aticle two');
 });
 
 app.get('/article3',function(req, res)
 {
-   res.sendFile('aticle three');
+   res.send('aticle three');
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
