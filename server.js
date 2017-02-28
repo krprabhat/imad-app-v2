@@ -6,17 +6,32 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var aricleOne = {
-  title :'Article one',
-  heading :'article1',
-  date:'feb 7 2017',
-  conte:`<p>Hello, this is article one</p>
+var articles = {
+   aricleOne : {
+              title :'Article one',
+              heading :'article1',
+              date:'feb 7 2017',
+              conte:`<p>Hello, this is article one</p>
         <p>The viewport is the user's visible area of a web page.The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
             Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.
 
              Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
 
               This was not perfect!! But a quick fix.</p>'`
+  },
+  articleTwo : {
+      title :'Article Two',
+              heading :'article2',
+              date:'feb 8 2017',
+              conte:`<p>Hello, this is article one</p>
+        <p>The viewport is the user's visible area of a web page.The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+            Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.
+
+             Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
+
+              This was not perfect!! But a quick fix.</p>'
+  }
+      
   };
 
 function createTemp(data) {
@@ -39,7 +54,7 @@ var temp =`
         <a href='/'>Home</a>
         </div>
         <hr/>
-        <h1>Feb 28 2017</h1>
+        <h1>${date}</h1>
         <p>${heading}</p>
         <p>${content}</p>
     </div>
