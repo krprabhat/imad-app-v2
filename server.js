@@ -17,10 +17,10 @@ var articles = {
 
              Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
 
-              This was not perfect!! But a quick fix.</p>'`
+              This was not perfect!! But a quick fix.</p>`
   },
    'article2' : {
-      title :'Article Two',
+              title :'Article Two',
               heading :'article2',
               date:'feb 8 2017',
               conte:`<p>Hello, this is article two</p>
@@ -29,8 +29,8 @@ var articles = {
 
              Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
 
-              This was not perfect!! But a quick fix.</p>'
-  }
+              This was not perfect!! But a quick fix.</p>`
+                }
       
   };
 
@@ -74,10 +74,7 @@ app.get('/:articleName',function(req, res)
 {
    res.send(createTemp(articles[articleName]));
 });
-app.get('/article2',function(req, res)
-{
-   res.send('aticle two');
-});
+
 
 app.get('/article3',function(req, res)
 {
