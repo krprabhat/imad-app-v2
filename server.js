@@ -56,9 +56,15 @@ var temp =
                 <a href='/'>Home</a>
                 </div>
                  <hr/>
-                <h1>${date}</h1>
-                <p>${heading}</p>
-                <p>${content}</p>
+                <h2>
+                ${heading}
+                </h2>
+                <div>
+                ${date}
+                </div>
+                <div>
+                ${content}
+                </div>
             </div>
          </body>        
     </html>`
