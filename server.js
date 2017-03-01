@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles = {
-   aricleOne : {
+   'article1' : {
               title :'Article one',
               heading :'article1',
               date:'feb 7 2017',
@@ -19,11 +19,11 @@ var articles = {
 
               This was not perfect!! But a quick fix.</p>'`
   },
-  articleTwo : {
+   'article2' : {
       title :'Article Two',
               heading :'article2',
               date:'feb 8 2017',
-              conte:`<p>Hello, this is article one</p>
+              conte:`<p>Hello, this is article two</p>
         <p>The viewport is the user's visible area of a web page.The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
             Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.
 
@@ -40,26 +40,28 @@ function createTemp(data) {
     var date=data.heading;
     var conte=data.conte;
     
-var temp =`
+var temp =
     <html>
-    <head>
-        <title>${title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = '/ui/style.css'>
-    </head>
+        <head>
+            <title>
+             ${title}
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href = '/ui/style.css'>
+         </head>
     
-    <body>
-      <div class="cont">
-        <div>
-        <a href='/'>Home</a>
-        </div>
-        <hr/>
-        <h1>${date}</h1>
-        <p>${heading}</p>
-        <p>${content}</p>
-    </div>
-    </body>        
-</html>`
+        <body>
+            <div class="cont">
+                <div>
+                <a href='/'>Home</a>
+                </div>
+                 <hr/>
+                <h1>${date}</h1>
+                <p>${heading}</p>
+                <p>${content}</p>
+            </div>
+         </body>        
+    </html>
 ;
 return temp;
 
@@ -68,9 +70,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article1',function(req, res)
+app.get('/:articleName',function(req, res)
 {
-   res.send(createTemp(articleOne));
+   res.send(createTemp(articles[articleName]));
 });
 app.get('/article2',function(req, res)
 {
