@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles = {
-   'article1' : {
+//var articles = {
+  var article1 = {
               title :'Article one',
               heading :'article1',
               date:'feb 7 2017',
@@ -18,8 +18,8 @@ var articles = {
              Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
 
               This was not perfect!! But a quick fix.</p>`
-  },
-   'article2' : {
+ // }
+  /** 'article2' : {
               title :'Article Two',
               heading :'article2',
               date:'feb 8 2017',
@@ -31,13 +31,14 @@ var articles = {
 
               This was not perfect!! But a quick fix.</p>`
                 }
-      
-  };
+     **/ 
+      };
 
 function createTemp(data) {
     var title =data.title;
-    var heading=data.heading;
     var date=data.date;
+    var heading=data.heading;
+    
     var conte=data.conte;
     
 var temp =
@@ -76,15 +77,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName',function(req, res)
+/**app.get('/:articleName',function(req, res)
 {  var articleName=req.params.articleName;
    res.send(createTemp(articles[articleName]));
-});
+});**/
 
 
-app.get('/article3',function(req, res)
+app.get('/article1',function(req, res)
 {
-   res.send('aticle three');
+   res.send(tcreateTemp(article1));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
