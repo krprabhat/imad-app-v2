@@ -41,7 +41,7 @@ function createTemp(data) {
     var conte=data.conte;
     
 var temp =
-    <html>
+    `<html>
         <head>
             <title>
              ${title}
@@ -61,7 +61,7 @@ var temp =
                 <p>${content}</p>
             </div>
          </body>        
-    </html>
+    </html>`
 ;
 return temp;
 
