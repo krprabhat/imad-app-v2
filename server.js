@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 
 app.get('/article1',function(req, res)
 {
-   res.send(tcreateTemp(article1));
+   res.send(createTemp(article1));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
