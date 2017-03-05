@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
+/**
 //var articles = {
   var article1 = {
               title :'Article one',
@@ -31,7 +31,7 @@ app.use(morgan('combined'));
 
               This was not perfect!! But a quick fix.</p>`
                 }
-     **/ 
+     
       };
 
 function createTemp(data) {
@@ -72,20 +72,20 @@ var temp =
 ;
 return temp;
 
-}
+}**/ 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/**app.get('/:articleName',function(req, res)
+ /**app.get('/:articleName',function(req, res)
 {  var articleName=req.params.articleName;
    res.send(createTemp(articles[articleName]));
 });**/
 
 
 app.get('/article1',function(req, res)
-{
-   res.send(createTemp(article1));
+{   res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+  // res.send(createTemp(article1));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
