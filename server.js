@@ -18,7 +18,7 @@ articleone : {
                 Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
 
                 This was not perfect!! But a quick fix.
-                </p>`}
+                </p>`},
 articletwo : {
      title: 'Article Two',
     heading :'This is Article 2',
@@ -82,10 +82,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
- /**app.get('/:articleName',function(req, res)
+ app.get('/:articleName',function(req, res)
 {  var articleName=req.params.articleName;
    res.send(createTemp(articles[articleName]));
-});**/
+});
 
 
 app.get('/article1',function(req, res)
