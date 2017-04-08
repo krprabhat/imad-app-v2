@@ -52,7 +52,7 @@ function move() {
 } 
 
 function move1() {
-  var elem = document.getElementById("myBar");   
+  var elem = document.getElementById("myBar1");   
   var width = 20;
   var id = setInterval(frame, 10);
   function frame() {
