@@ -44,3 +44,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.bar {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
