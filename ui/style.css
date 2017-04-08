@@ -36,11 +36,11 @@ body {
     background-image: url("https://www.schoolpage.me/wp-content/uploads/2015/06/computer-bg.jpg");
 
     /* Set a specific height */
-    height:200%;
+    height:100%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
