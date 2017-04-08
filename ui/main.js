@@ -41,7 +41,7 @@ function move() {
   var width = 20;
   var id = setInterval(frame, 10);
   function frame() {
-    if (width >= 50) {
+    if (width >= 70) {
       clearInterval(id);
     } else {
       width++; 
@@ -56,7 +56,51 @@ function move1() {
   var width = 20;
   var id = setInterval(frame, 10);
   function frame() {
-    if (width >= 70) {
+    if (width >= 80) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+function move2() {
+  var elem = document.getElementById("myBar2");   
+  var width = 20;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 60) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+function move3() {
+  var elem = document.getElementById("myBar3");   
+  var width = 20;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 90) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+function move4() {
+  var elem = document.getElementById("myBar4");   
+  var width = 20;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 60) {
       clearInterval(id);
     } else {
       width++; 
