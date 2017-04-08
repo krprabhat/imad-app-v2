@@ -35,7 +35,7 @@ button.onclick = function() {
     request.send(null);
     
 };
-
+window.onscroll = function() {move()};
 function move() {
   var elem = document.getElementById("myBar");   
   var width = 20;
