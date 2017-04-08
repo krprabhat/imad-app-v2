@@ -36,19 +36,17 @@ button.onclick = function() {
     
 };
 
-var bar = new ProgressBar.Circle(container, {
-  color: '#FFEA82',
-  trailColor: '#eee',
-  trailWidth: 1,
-  duration: 1400,
-  easing: 'bounce',
-  strokeWidth: 6,
-  from: {color: '#FFEA82', a:0},
-  to: {color: '#ED6A5A', a:1},
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 20;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 50) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
   }
-});
-
-bar.animate(0.5); 
+} 
